@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Б5Групп — вариант 2.">
+  <title>Б5Групп — Вариант 02</title>
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="icon" href="assets/b5g-logo.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/inter-variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=58">
+  <script src="shader-sources.js" defer></script>
+  <script src="shader.js?v=7" defer></script>
+  <script src="particles.js?v=13" defer></script>
+  <script src="script.js?v=15" defer></script>
+<script src="hero-rays.js?v=2" defer></script></head>
+<body>
+<header class="header site-header">
+<a class="brand" href="#hero" aria-label="Б5Групп — главная"><img src="assets/b5g-logo.svg" width="336" height="118" alt="Б5Групп"></a>
+    <div class="menu" id="navigation">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-content" aria-label="Открыть меню">
+        <span class="menu-name"><span class="menu-lines" aria-hidden="true"><i></i><i></i></span><span class="label-window"><span class="menu-label">Меню</span><span class="open-label">Закрыть</span></span></span>
+      </button>
+      <nav class="menu-content" id="menu-content" aria-label="Основная навигация" inert>
+        <a class="menu-row" href="#hero"><span>Главная</span></a>
+        <a class="menu-row" href="#solutions"><span>Решения</span></a>
+        <a class="menu-row" href="#success-stories"><span>Истории успеха</span></a>
+        <a class="menu-row" href="#news"><span>Новости</span></a>
+        <a class="menu-row" href="#contacts"><span>Контакты</span></a>
+      </nav>
+    </div>
+<a class="hero-contact" href="#contacts"><span>Связаться с нами</span></a>
+</header>
+
+<main>
+  <section class="hero" id="hero" aria-label="Б5Групп">
+    <img class="particle-logo-fallback" src="assets/logo_1section.svg" alt="" aria-hidden="true">
+    <canvas class="particle-stage" id="particle-stage" aria-hidden="true"></canvas>
+    <img class="hero-rock" src="assets/rock-bg.png" alt="" aria-hidden="true">
+
+
+    <p class="hero-statement">Создаём сложные решения.<br>Делаем их простыми для бизнеса.</p>
+    
+  </section>
+<section class="about-section" id="about" aria-labelledby="about-title">
+  <div class="about-intro">
+    <h2 id="about-title">Превращаем смелые идеи в цифровые продукты, которым доверяют.</h2>
+    <div class="about-details">
+      <div><p>Б5Групп — команда, которая погружается в задачи бизнеса. Объединяем дизайн и технологии, чтобы создавать понятные и надёжные решения.</p></div>
+    </div>
+  </div>
+  <div class="about-photo-scroll">
+    <div class="about-photo-sticky"><div class="about-photo-frame"><img src="assets/about-team.jpg" alt="Работа над цифровым продуктом Б5Групп на планшете" width="2752" height="1536" loading="lazy" decoding="async"></div></div>
+  </div>
+</section>
+
+<section class="clients-section" id="clients" aria-labelledby="clients-title">
+  <div class="clients-heading"><h2 id="clients-title">С нами<br>сотрудничают<br>крупные<br>компании<span>.</span></h2></div>
+  <ul class="clients-logos" aria-label="Компании"><li class="client-logo"><img src="assets/clients/raiffeisen.18ee9523.png" alt="Райффайзен Банк" width="330" height="110" loading="lazy"></li><li class="client-logo"><img src="assets/clients/alpha.94a51439.png" alt="Альфа-Банк" width="330" height="110" loading="lazy"></li><li class="client-logo"><img src="assets/clients/vtb.08dab0e6.png" alt="ВТБ" width="330" height="110" loading="lazy"></li><li class="client-logo"><img src="assets/clients/rosbank.a0469381.png" alt="Росбанк" width="330" height="110" loading="lazy"></li><li class="client-logo"><img src="assets/clients/vk.796ca20d.png" alt="VK" width="330" height="110" loading="lazy"></li><li class="client-logo"><img src="assets/clients/x5group.e3d410cb.png" alt="X5 Group" width="330" height="110" loading="lazy"></li></ul>
+</section>
+  <section class="stack-section" id="solutions" aria-labelledby="stack-title">
+    <div class="stack-ticker stack-ticker-top" aria-hidden="true">
+      <div class="stack-track">
+        <span class="stack-card" style="--y:18px;--r:-5deg"><img src="assets/stack/javascript.svg" alt=""></span>
+        <span class="stack-card" style="--y:-24px;--r:4deg"><img src="assets/stack/typescript.svg" alt=""></span>
+        <span class="stack-card" style="--y:8px;--r:-2deg"><img src="assets/stack/react.svg" alt=""></span>
+        <span class="stack-card" style="--y:-34px;--r:5deg"><img src="assets/stack/nodedotjs.svg" alt=""></span>
+        <span class="stack-card" style="--y:20px;--r:-4deg"><img src="assets/stack/python.svg" alt=""></span>
+        <span class="stack-card" style="--y:-12px;--r:3deg"><img src="assets/stack/go.svg" alt=""></span>
+        <span class="stack-card" style="--y:26px;--r:-3deg"><img src="assets/stack/docker.svg" alt=""></span>
+        <span class="stack-card" style="--y:-28px;--r:4deg"><img src="assets/stack/postgresql.svg" alt=""></span>
+        <span class="stack-card" style="--y:12px;--r:-5deg"><img src="assets/stack/kubernetes.svg" alt=""></span>
+        <span class="stack-card" style="--y:-20px;--r:2deg"><img src="assets/stack/amazonwebservices.svg" alt=""></span>
+        <span class="stack-card" style="--y:24px;--r:-2deg"><img src="assets/stack/git.svg" alt=""></span>
+        <span class="stack-card" style="--y:-30px;--r:5deg"><img src="assets/stack/nextdotjs.svg" alt=""></span>
+        <span class="stack-card" style="--y:18px;--r:-5deg"><img src="assets/stack/javascript.svg" alt=""></span>
+        <span class="stack-card" style="--y:-24px;--r:4deg"><img src="assets/stack/typescript.svg" alt=""></span>
+        <span class="stack-card" style="--y:8px;--r:-2deg"><img src="assets/stack/react.svg" alt=""></span>
+        <span class="stack-card" style="--y:-34px;--r:5deg"><img src="assets/stack/nodedotjs.svg" alt=""></span>
+        <span class="stack-card" style="--y:20px;--r:-4deg"><img src="assets/stack/python.svg" alt=""></span>
+        <span class="stack-card" style="--y:-12px;--r:3deg"><img src="assets/stack/go.svg" alt=""></span>
+        <span class="stack-card" style="--y:26px;--r:-3deg"><img src="assets/stack/docker.svg" alt=""></span>
+        <span class="stack-card" style="--y:-28px;--r:4deg"><img src="assets/stack/postgresql.svg" alt=""></span>
+        <span class="stack-card" style="--y:12px;--r:-5deg"><img src="assets/stack/kubernetes.svg" alt=""></span>
+        <span class="stack-card" style="--y:-20px;--r:2deg"><img src="assets/stack/amazonwebservices.svg" alt=""></span>
+        <span class="stack-card" style="--y:24px;--r:-2deg"><img src="assets/stack/git.svg" alt=""></span>
+        <span class="stack-card" style="--y:-30px;--r:5deg"><img src="assets/stack/nextdotjs.svg" alt=""></span>
+      </div>
+    </div>
+    <div class="stack-copy">
+      <h2 id="stack-title">Создаём на технологиях,<br>которые <span>двигают бизнес.</span></h2>
+    </div>
+    <div class="stack-ticker stack-ticker-bottom" aria-hidden="true">
+      <div class="stack-track">
+        <span class="stack-card" style="--y:-18px;--r:4deg"><img src="assets/stack/docker.svg" alt=""></span>
+        <span class="stack-card" style="--y:26px;--r:-5deg"><img src="assets/stack/git.svg" alt=""></span>
+        <span class="stack-card" style="--y:-8px;--r:3deg"><img src="assets/stack/python.svg" alt=""></span>
+        <span class="stack-card" style="--y:34px;--r:-4deg"><img src="assets/stack/react.svg" alt=""></span>
+        <span class="stack-card" style="--y:-20px;--r:5deg"><img src="assets/stack/postgresql.svg" alt=""></span>
+        <span class="stack-card" style="--y:12px;--r:-2deg"><img src="assets/stack/typescript.svg" alt=""></span>
+        <span class="stack-card" style="--y:-26px;--r:4deg"><img src="assets/stack/amazonwebservices.svg" alt=""></span>
+        <span class="stack-card" style="--y:22px;--r:-3deg"><img src="assets/stack/kubernetes.svg" alt=""></span>
+        <span class="stack-card" style="--y:-12px;--r:5deg"><img src="assets/stack/nodedotjs.svg" alt=""></span>
+        <span class="stack-card" style="--y:30px;--r:-4deg"><img src="assets/stack/javascript.svg" alt=""></span>
+        <span class="stack-card" style="--y:-22px;--r:2deg"><img src="assets/stack/nextdotjs.svg" alt=""></span>
+        <span class="stack-card" style="--y:14px;--r:-3deg"><img src="assets/stack/go.svg" alt=""></span>
+        <span class="stack-card" style="--y:-18px;--r:4deg"><img src="assets/stack/docker.svg" alt=""></span>
+        <span class="stack-card" style="--y:26px;--r:-5deg"><img src="assets/stack/git.svg" alt=""></span>
+        <span class="stack-card" style="--y:-8px;--r:3deg"><img src="assets/stack/python.svg" alt=""></span>
+        <span class="stack-card" style="--y:34px;--r:-4deg"><img src="assets/stack/react.svg" alt=""></span>
+        <span class="stack-card" style="--y:-20px;--r:5deg"><img src="assets/stack/postgresql.svg" alt=""></span>
+        <span class="stack-card" style="--y:12px;--r:-2deg"><img src="assets/stack/typescript.svg" alt=""></span>
+        <span class="stack-card" style="--y:-26px;--r:4deg"><img src="assets/stack/amazonwebservices.svg" alt=""></span>
+        <span class="stack-card" style="--y:22px;--r:-3deg"><img src="assets/stack/kubernetes.svg" alt=""></span>
+        <span class="stack-card" style="--y:-12px;--r:5deg"><img src="assets/stack/nodedotjs.svg" alt=""></span>
+        <span class="stack-card" style="--y:30px;--r:-4deg"><img src="assets/stack/javascript.svg" alt=""></span>
+        <span class="stack-card" style="--y:-22px;--r:2deg"><img src="assets/stack/nextdotjs.svg" alt=""></span>
+        <span class="stack-card" style="--y:14px;--r:-3deg"><img src="assets/stack/go.svg" alt=""></span>
+      </div>
+    </div>
+  </section>
+  <section class="projects-section" id="success-stories" aria-labelledby="projects-title">
+    <div class="projects-intro">
+      <h2 id="projects-title">Наши проекты.<br><span>Решения, которыми мы гордимся</span></h2>
+    </div>
+
+    <div class="project-gallery">
+      <article class="project-stage" data-tilt="-1">
+        <a class="project-card project-card-platform" href="#contacts">
+          <img src="assets/9cXi9h55IYpDyuNDsxHrBUImuQ.webp" alt="Интерфейс финансового приложения на смартфоне">
+          <span class="project-shade" aria-hidden="true"></span>
+          <div class="project-copy">
+            <h3>Единая B2B-платформа</h3>
+            <span>Экосистема для бизнеса • 2026</span>
+          </div>
+          <span class="project-more">Смотреть проект <b aria-hidden="true">↗</b></span>
+        </a>
+      </article>
+
+      <article class="project-stage" data-tilt="1">
+        <a class="project-card project-card-ai" href="#contacts">
+          <img src="assets/PWqPaP46gjtGsu9884emJe9Ejns.webp" alt="Мобильное приложение для ухода за питомцами">
+          <span class="project-shade" aria-hidden="true"></span>
+          <div class="project-copy">
+            <h3>Интеллектуальная аналитика</h3>
+            <span>Данные и автоматизация • 2026</span>
+          </div>
+          <span class="project-more">Смотреть проект <b aria-hidden="true">↗</b></span>
+        </a>
+      </article>
+
+      <article class="project-stage" data-tilt="-1">
+        <a class="project-card project-card-fintech" href="#contacts">
+          <img src="assets/BJvhHmvSfsjdQXOK21APpgWw9pc.webp" alt="Дизайн цифрового сервиса">
+          <span class="project-shade" aria-hidden="true"></span>
+          <div class="project-copy">
+            <h3>Платёжная инфраструктура</h3>
+            <span>Надёжные бизнес-процессы • 2026</span>
+          </div>
+          <span class="project-more">Смотреть проект <b aria-hidden="true">↗</b></span>
+        </a>
+      </article>
+
+      <article class="project-stage" data-tilt="1">
+        <a class="project-card project-card-industry" href="#contacts">
+          <img src="assets/QxCIOzDk11Ziq87CsE1dVOneBd0.webp" alt="Синяя банковская карта Kiwe">
+          <span class="project-shade" aria-hidden="true"></span>
+          <div class="project-copy">
+            <h3>Система мониторинга</h3>
+            <span>Контроль производства • 2026</span>
+          </div>
+          <span class="project-more">Смотреть проект <b aria-hidden="true">↗</b></span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contacts">
+    <div class="footer-info">
+      <div class="footer-intro">
+        <p class="footer-tagline">Дизайн для тех, кто хочет стать<br>лучшей версией себя.</p>
+        <a class="footer-contact" href="#contacts"><span>Связаться с нами</span></a>
+        <p class="copyright">2026 Б5ГРУПП,<br>ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
+      </div>
+      <div class="footer-navs">
+        <nav class="footer-column" aria-label="Разделы сайта">
+          <p>Исследовать</p>
+          <a href="#hero">Главная</a>
+          <a href="#solutions">Решения</a>
+          <a href="#success-stories">Истории успеха</a>
+          <a href="#news">Новости</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+        <nav class="footer-column" aria-label="Социальные сети">
+          <p>Социальные сети</p>
+          <a href="#contacts">Behance</a>
+          <a href="#contacts">LinkedIn</a>
+          <a href="#contacts">The X</a>
+        </nav>
+      </div>
+      <div class="footer-legal">
+        <a href="#contacts">Условия</a>
+        <a href="#contacts">Политика конфиденциальности</a>
+      </div>
+    </div>
+    <div class="footer-art" aria-label="Б5Групп">
+      <div class="background-fallback" aria-hidden="true"></div>
+      <canvas class="background" id="footer-shader" aria-hidden="true"></canvas>
+      <img class="footer-wordmark" src="assets/b5g-wordmark.svg" alt="" aria-hidden="true">
+    </div>
+  </footer>
+</main>
+<dialog class="contact-dialog" aria-labelledby="contact-title">
+  <div class="contact-panel">
+    <button class="contact-close" type="button" aria-label="Закрыть форму">×</button>
+    <h2 id="contact-title">Давайте создадим<br>что-то важное.</h2>
+    <p class="contact-intro">Расскажите о вашей задаче — начнём с знакомства.</p>
+    <form class="contact-form">
+      <div class="contact-fields">
+        <label>Имя<input name="name" autocomplete="name" placeholder="Как к вам обращаться" required maxlength="120"></label>
+        <label>Почта<input name="email" type="email" autocomplete="email" placeholder="you@company.ru" required maxlength="254"></label>
+      </div>
+      <label>Сообщение<textarea name="message" rows="7" placeholder="Расскажите о проекте, целях и задачах" required maxlength="5000"></textarea></label>
+      <button class="contact-submit" type="submit">Отправить сообщение <span aria-hidden="true">↗</span></button>
+      <p class="contact-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</dialog>
+<div class="scroll-blur scroll-blur-top" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="scroll-blur scroll-blur-bottom" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+</body>
+</html>
+
