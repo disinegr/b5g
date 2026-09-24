@@ -4,23 +4,45 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#000000">
-  <meta name="description" content="Б5Групп — вариант 2.">
-  <title>Б5Групп — Вариант 02</title>
-  <script>document.documentElement.classList.add('js')</script>
+  <meta name="description" content="Б5Групп — вариант 3.">
+  <title>Б5Групп — Вариант 03</title>
+  <script>
+    window.B5G_EFFECTS={loader:false,crt:false};
+    document.documentElement.classList.add('js');
+    document.documentElement.dataset.heroVariant=new URLSearchParams(location.search).get('hero')==='2'?'2':'1';
+    if(window.B5G_EFFECTS.loader){
+      document.documentElement.classList.add('loader-active','hero-intro-pending');
+    }else{
+      document.documentElement.classList.add('loader-disabled','hero-direct-pending');
+    }
+    if(!window.B5G_EFFECTS.crt)document.documentElement.classList.add('crt-disabled');
+  </script>
   <link rel="icon" href="assets/b5g-logo.svg" type="image/svg+xml">
   <link rel="preload" href="assets/inter-variable.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=58">
-  <script src="shader-sources.js" defer></script>
-  <script src="shader.js?v=7" defer></script>
-  <script src="particles.js?v=13" defer></script>
-  <script src="script.js?v=15" defer></script>
-<script src="hero-rays.js?v=2" defer></script></head>
+  <link rel="preload" href="assets/hero-block-v2.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css?v=103">
+  <script src="script.js?v=40" defer></script>
+</head>
 <body>
+<div class="site-loader" id="site-loader" aria-label="Загрузка сайта">
+  <div class="site-loader__panel">
+    <p class="site-loader__label" aria-label="Loading">LOADING<span class="site-loader__dots" aria-hidden="true"><i>.</i><i>.</i><i>.</i></span></p>
+    <div class="site-loader__track" role="progressbar" aria-label="Загрузка сайта" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+      <div class="site-loader__segments" aria-hidden="true"></div>
+    </div>
+  </div>
+</div>
+<div class="crt-overlay" aria-hidden="true">
+  <div class="crt-overlay__scanlines"></div>
+  <div class="crt-overlay__noise"></div>
+  <div class="crt-overlay__vignette"></div>
+</div>
 <header class="header site-header">
 <a class="brand" href="#hero" aria-label="Б5Групп — главная"><img src="assets/b5g-logo.svg" width="336" height="118" alt="Б5Групп"></a>
     <div class="menu" id="navigation">
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-content" aria-label="Открыть меню">
-        <span class="menu-name"><span class="menu-lines" aria-hidden="true"><i></i><i></i></span><span class="label-window"><span class="menu-label">Меню</span><span class="open-label">Закрыть</span></span></span>
+        <span class="menu-lines" aria-hidden="true"><i></i><i></i></span>
+        <span class="sr-only">Меню</span>
       </button>
       <nav class="menu-content" id="menu-content" aria-label="Основная навигация" inert>
         <a class="menu-row" href="#hero"><span>Главная</span></a>
@@ -30,20 +52,45 @@
         <a class="menu-row" href="#contacts"><span>Контакты</span></a>
       </nav>
     </div>
-<a class="hero-contact" href="#contacts"><span>Связаться с нами</span></a>
+<a class="hero-contact" href="#contacts"><span>Связаться с нами</span><span class="contact-phone" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M7.2 3.7 9.8 8l-2 1.8c1.2 2.5 3 4.3 5.5 5.5l1.8-2 4.3 2.6-.8 3.1c-.2.8-.9 1.3-1.7 1.3C9.6 20.3 3.7 14.4 3.7 7.1c0-.8.5-1.5 1.3-1.7l2.2-.7Z"/></svg></span></a>
 </header>
 
 <main>
+  <div class="hero-pin">
   <section class="hero" id="hero" aria-label="Б5Групп">
-    <img class="particle-logo-fallback" src="assets/logo_1section.svg" alt="" aria-hidden="true">
-    <canvas class="particle-stage" id="particle-stage" aria-hidden="true"></canvas>
-    <img class="hero-rock" src="assets/rock-bg.png" alt="" aria-hidden="true">
-
-
-    <p class="hero-statement">Создаём сложные решения.<br>Делаем их простыми для бизнеса.</p>
-    
+    <div class="hero-variant hero-variant--one" data-hero-content="1">
+      <div class="hero-camera" aria-hidden="true">
+        <div class="hero-media">
+          <video muted loop playsinline preload="none" poster="assets/hero-block-v2.jpg">
+            <source data-src="assets/hero-loop.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <h1><span>Вместе</span><span>создаем</span><span>цифровое</span><span>будущее</span></h1>
+        <p>Разрабатываем программное обеспечение под ваши задачи и формируем эффективные IT-команды. Подбираем специалистов с нужными навыками для быстрого и качественного запуска проекта.</p>
+      </div>
+    </div>
+    <div class="hero-variant hero-variant--two" data-hero-content="2" aria-hidden="true" inert>
+      <div class="hero-two-scene" aria-hidden="true">
+        <img class="hero-two-background" data-src="assets/hero-concept-2/background.png" alt="">
+        <div class="hero-two-object hero-two-object--mark"><img data-src="assets/hero-concept-2/stone-mark.png" alt=""></div>
+        <div class="hero-two-object hero-two-object--small"><img data-src="assets/hero-concept-2/rock-small-top.png" alt=""></div>
+        <div class="hero-two-object hero-two-object--upper"><img data-src="assets/hero-concept-2/rock-upper-right.png" alt=""></div>
+        <div class="hero-two-object hero-two-object--left"><img data-src="assets/hero-concept-2/rock-left.png" alt=""></div>
+        <div class="hero-two-object hero-two-object--right"><img data-src="assets/hero-concept-2/rock-large-right.png" alt=""></div>
+      </div>
+      <h1 class="hero-two-title">Создаём сложные решения.<br>Делаем их простыми<br>для бизнеса.</h1>
+      <p class="hero-two-description">Разрабатываем программное обеспечение под ваши задачи и формируем эффективные IT-команды.<br>Подбираем специалистов с нужными навыками для быстрого и качественного запуска проекта.</p>
+    </div>
+    <div class="hero-switcher" role="group" aria-label="Вариант первого экрана">
+      <span class="hero-switcher-label">КОНЦЕПЦИЯ</span>
+      <button type="button" data-hero-select="1" aria-label="Показать первый вариант" aria-pressed="true">01</button>
+      <button type="button" data-hero-select="2" aria-label="Показать второй вариант" aria-pressed="false">02</button>
+    </div>
   </section>
-<section class="about-section" id="about" aria-labelledby="about-title">
+  </div>
+<section class="about-section" id="about" aria-labelledby="about-title" hidden data-temporarily-hidden="true">
   <div class="about-intro">
     <h2 id="about-title">Превращаем смелые идеи в цифровые продукты, которым доверяют.</h2>
     <div class="about-details">
@@ -127,8 +174,8 @@
 
     <div class="project-gallery">
       <article class="project-stage" data-tilt="-1">
-        <a class="project-card project-card-platform" href="#contacts">
-          <img src="assets/9cXi9h55IYpDyuNDsxHrBUImuQ.webp" alt="Интерфейс финансового приложения на смартфоне">
+        <a class="project-card project-card-platform" href="case.html">
+          <img src="assets/b2b-platform-preview.png" alt="Интерфейс платформы сертификации в окне браузера">
           <span class="project-shade" aria-hidden="true"></span>
           <div class="project-copy">
             <h3>Единая B2B-платформа</h3>
@@ -140,7 +187,7 @@
 
       <article class="project-stage" data-tilt="1">
         <a class="project-card project-card-ai" href="#contacts">
-          <img src="assets/PWqPaP46gjtGsu9884emJe9Ejns.webp" alt="Мобильное приложение для ухода за питомцами">
+          <img src="assets/analytics-preview.png" alt="Интерфейс Б5Ассистента в окне браузера">
           <span class="project-shade" aria-hidden="true"></span>
           <div class="project-copy">
             <h3>Интеллектуальная аналитика</h3>
@@ -179,7 +226,7 @@
   <footer class="site-footer" id="contacts">
     <div class="footer-info">
       <div class="footer-intro">
-        <p class="footer-tagline">Дизайн для тех, кто хочет стать<br>лучшей версией себя.</p>
+        <p class="footer-tagline">Создаём цифровые продукты,<br>которые двигают бизнес вперёд.</p>
         <a class="footer-contact" href="#contacts"><span>Связаться с нами</span></a>
         <p class="copyright">2026 Б5ГРУПП,<br>ВСЕ ПРАВА ЗАЩИЩЕНЫ</p>
       </div>
@@ -187,16 +234,13 @@
         <nav class="footer-column" aria-label="Разделы сайта">
           <p>Исследовать</p>
           <a href="#hero">Главная</a>
-          <a href="#solutions">Решения</a>
-          <a href="#success-stories">Истории успеха</a>
-          <a href="#news">Новости</a>
           <a href="#contacts">Контакты</a>
+          <a href="#success-stories">Проекты</a>
         </nav>
         <nav class="footer-column" aria-label="Социальные сети">
           <p>Социальные сети</p>
-          <a href="#contacts">Behance</a>
-          <a href="#contacts">LinkedIn</a>
-          <a href="#contacts">The X</a>
+          <span class="footer-social-placeholder">Вконтакте</span>
+          <span class="footer-social-placeholder">MAX</span>
         </nav>
       </div>
       <div class="footer-legal">
@@ -204,17 +248,23 @@
         <a href="#contacts">Политика конфиденциальности</a>
       </div>
     </div>
-    <div class="footer-art" aria-label="Б5Групп">
-      <div class="background-fallback" aria-hidden="true"></div>
-      <canvas class="background" id="footer-shader" aria-hidden="true"></canvas>
-      <img class="footer-wordmark" src="assets/b5g-wordmark.svg" alt="" aria-hidden="true">
-    </div>
   </footer>
 </main>
 <dialog class="contact-dialog" aria-labelledby="contact-title">
+  <div class="contact-modal-header">
+    <a class="contact-modal-brand" href="#hero" aria-label="Б5Групп — главная">
+      <img src="assets/b5g-logo.svg" alt="Б5Групп">
+    </a>
+    <button class="contact-close" type="button" aria-label="Закрыть форму">
+      <span></span><span></span>
+    </button>
+    <div class="contact-modal-label" aria-hidden="true">
+      <span>Связаться с нами</span>
+      <span class="contact-phone"><svg viewBox="0 0 24 24" focusable="false"><path d="M7.2 3.7 9.8 8l-2 1.8c1.2 2.5 3 4.3 5.5 5.5l1.8-2 4.3 2.6-.8 3.1c-.2.8-.9 1.3-1.7 1.3C9.6 20.3 3.7 14.4 3.7 7.1c0-.8.5-1.5 1.3-1.7l2.2-.7Z"/></svg></span>
+    </div>
+  </div>
   <div class="contact-panel">
-    <button class="contact-close" type="button" aria-label="Закрыть форму">×</button>
-    <h2 id="contact-title">Давайте создадим<br>что-то важное.</h2>
+    <h2 id="contact-title">Давайте создадим<br><span>что-то важное.</span></h2>
     <p class="contact-intro">Расскажите о вашей задаче — начнём с знакомства.</p>
     <form class="contact-form">
       <div class="contact-fields">
